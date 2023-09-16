@@ -1,0 +1,98 @@
+### CRUD USUARIOS 
+### Para crear un usuario POST ‘/usuarios’
+POST http://localhost:3000/usuarios
+Content-Type: application/json
+
+ {
+ "id":"4", 
+ "nombre": "Sandro Flores", 
+ "correo": "sflores@gmail.com", 
+ "contrasena": "789abc", 
+ "estado": "TRUE"
+  }
+
+### Para listar a todos lo usuarios: GET ‘/usuarios’
+GET http://localhost:3000/usuarios
+
+### Para listar un usuario en especifico GET ‘/ usuarios/:id_usuario’
+GET http://localhost:3000/usuarios/4
+
+### Para actualizar los datos de un usuario: PUT ‘/usuarios/:id_usuario’
+PUT http://localhost:3000/usuarios/4
+Content-Type: application/json
+
+ {
+ "nombre": "Sandro Flores", 
+ "correo": "sflores@gmail.com", 
+ "contrasena": "789abc", 
+ "estado": "TRUE"
+  }
+
+### Para eliminar a un usuario: DELETE ‘usuarios/:id_usuario’
+DELETE  http://localhost:3000/usuarios/4
+
+
+### CRUD CATEGORIAS
+### Para crear una categoria POST ‘/categorias’
+POST http://localhost:3000/categorias
+Content-Type: application/json
+
+ {
+ "id":"3", 
+ "nombre": "CARNES", 
+ "usuario_id": "1" 
+  }
+
+### Para listar a todos lo categorias: GET ‘/categorias’
+GET http://localhost:3000/categorias
+
+### Para listar una categoria en especifico GET  categorias/:id_categoria’
+GET http://localhost:3000/categorias/3
+
+### Para actualizar los datos de una categoria: PUT ‘/categorias/:id_categoria’
+PUT http://localhost:3000/categorias/3
+Content-Type: application/json
+
+ { 
+ "nombre": "CARNES 1", 
+ "usuario_id": "1"
+  }
+
+### Para eliminar una categoria: DELETE ‘categorias/:id_categoria’
+DELETE  http://localhost:3000/categorias/3
+
+
+### CRUD PRODUCTOS
+### Para crear una producto POST ‘/productos’
+POST http://localhost:3000/productos
+Content-Type: application/json
+
+ {
+  "id": "5", 
+  "nombre": "Yogurt de Frutilla", 
+  "precio_initario": "15.50", 
+  "estado": "TRUE", 
+  "categoria_id": "1", 
+  "usuario_id": "1"
+  }
+
+### Para listar a todos los productos : GET ‘/productos’
+GET http://localhost:3000/productos
+
+### Para listar una producto en especifico: GET  ‘productos/:id_producto’
+GET http://localhost:3000/productos/5
+
+### Para actualizar los datos de un producto : PUT ‘/productos/:id_producto’
+PUT http://localhost:3000/productos/5
+Content-Type: application/json
+
+{
+  "nombre": "Yogurt de Frutilla 1", 
+  "precio_initario": "15.50", 
+  "estado": "TRUE", 
+  "categoria_id": "1", 
+  "usuario_id": "1"
+  }
+
+### Para eliminar un producto: DELETE ‘productos/:id_producto’
+DELETE  http://localhost:3000/productos/5
